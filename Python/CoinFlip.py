@@ -1,7 +1,3 @@
 import random
 
-coin=random.randint(0,1)
-if coin==1:
-	print("Head")
-else:
-	print("Tails")
+print("Head" if random.randint(0,1)==1 else "Tails")
