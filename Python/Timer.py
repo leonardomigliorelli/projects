@@ -4,16 +4,15 @@ import time
 while True: # Inserire il tempo
 	try:
 		tempo=input("Inserisci il tempo (h:m:s)\n").replace(' ','').split(':')
-		if len(tempo) not in [1,2,3]:
-			raise ValueError
+		assert len(tempo) in [1,2,3]
 
-		for i in range(3-len(tempo)):
+		while len(tempo) < 3:
 			tempo.append(0)
 
 		tempo=[int(tempo[i] or 0) for i in range(3)]
 
 		break
-	except ValueError:
+	except:
 		print('Il valore inserito è errato, usare la formattazione corretta (ore:minuti:secondi)')
 		
 
