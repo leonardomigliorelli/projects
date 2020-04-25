@@ -1,10 +1,11 @@
 import random
 import time
 
+space="--------------------------------------------------------\n"
 values=('sasso', 'carta', 'forbici')
 
 while True:
-	player=input("Inserire Sasso Carta o Forbici\n").lower().strip()
+	player=input("\nInserire Sasso Carta o Forbici\n").lower().strip()
 	pc=random.choice(values)
 	
 	time.sleep(1)
@@ -17,6 +18,6 @@ while True:
 		else:
 			print("Hai perso")
 	else:
-		print("Errore,", end=' ')
+		print(space, "Errore,", end=' ')
 		continue
 	time.sleep(1)

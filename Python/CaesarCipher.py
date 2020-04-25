@@ -1,4 +1,4 @@
-alfabeto=('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z')
+alfabeto='abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz'
 text=input('Inserire il testo: ').lower()
 textList=[text[i] for i in range(len(text))]# Creo una lista partendo dal text
 
@@ -13,6 +13,8 @@ while True: # Inserimento della key con controllo -25<key<25
 		print('ERRORE bisogna inserire un numero')
 	else:
 		break
+
+key=(key+26 if key<0 else key)
 
 for n in range(25):
 	for textId in range(len(text)):
