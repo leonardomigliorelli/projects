@@ -15,24 +15,24 @@ while True:
 	print("2) Medium")
 	print("3) Hard")
 	print("4) Very Hard")
-	lvl=input(" ").lower().replace(' ','')
+	option=input(" ").lower().replace(' ','')
 
 	operator=random.choice(operations)
 
-	if lvl=='1' or lvl=='easy':
+	if option=='1' or option=='easy':
 		value1=str(random.choice(easy))
 		value2=str(random.choice(easy))
-	elif lvl=='2' or lvl=='medium':
+	elif option=='2' or option=='medium':
 		value1=str(random.choice(medium))
 		value2=str(random.choice(medium))
-	elif lvl=='3' or lvl=='hard':
+	elif option=='3' or option=='hard':
 		value1=str(random.choice(hard))
 		value2=str(random.choice(hard))
-	elif lvl=='4' or lvl=='veryhard':
+	elif option=='4' or option=='veryhard':
 		value1=str(random.choice(veryhard))
 		value2=str(random.choice(veryhard))
 	else:
-		print("ERRORE, scelta non riconosciuta:",lvl)
+		print("ERRORE, scelta non riconosciuta:",option)
 		continue
 
 	operazione=value1+operator+value2
