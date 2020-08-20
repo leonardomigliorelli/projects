@@ -1,4 +1,5 @@
 import pyAesCrypt
+
 BufferSize=64*1024
 file=input("Inserire il percorso del file:\n").strip()
 password=input("Inserire la password:\n").strip()

@@ -25,7 +25,6 @@ def haveWinner():
 		else:
 			return False
 
-
 table=[1,2,3,4,5,6,7,8,9]
 i=1
 
@@ -42,7 +41,5 @@ while True:
 	table[table.index(selezione)]=xo
 
 	i=(1 if i == 2 else 2)
-
-
 
 

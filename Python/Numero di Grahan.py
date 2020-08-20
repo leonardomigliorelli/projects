@@ -16,7 +16,7 @@ for i in range(14):
 
 	print("Ci ha impiegato {:.3} secondi con un incremento del {}%".format(tempoImpiegato, diff))
 
-print("Sto salvando il valore nel file Grahan_Number")
-file=open("Grahan_Number.txt", "w")
-file.write(str(valore))
-file.close()
+with open("Grahan_Number.txt", "w") as file:
+	print("Sto salvando il valore nel file Grahan_Number")
+	file.write(str(valore))
+	print("\nSalvato con successo")
