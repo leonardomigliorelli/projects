@@ -4,6 +4,7 @@ possibilities = {'md5', 'sha1', 'sha224', 'sha256', 'sha384', 'sha512', 'sha3_22
 
 hash = None
 file = str(open(input("Inserire il percorso del file: ").strip(), 'r')).encode('utf-8')
+file = str(open(input("Inserire il percorso del file: ").strip(), 'rb')).encode('utf-8')
 knowHash = input("Inserire il codice da verificare (vuoto se non richiesto): ").strip()
 tipo = input("Inserire il tipo di hash: ").replace(' ', '').lower()
 
