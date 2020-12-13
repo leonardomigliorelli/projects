@@ -39,4 +39,16 @@ abstract public class Input {
 
         return s.nextLine();
     }
+    static float getFloat(String x){
+        Scanner s = new Scanner(System.in);
+        System.out.println(x);
+
+        return s.nextFloat();
+    }
+    static double getDouble(String x){
+        Scanner s = new Scanner(System.in);
+        System.out.println(x);
+
+        return s.nextDouble();
+    }
 }
