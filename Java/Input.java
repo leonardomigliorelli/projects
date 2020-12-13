@@ -39,16 +39,22 @@ abstract public class Input {
 
         return s.nextLine();
     }
-    static float getFloat(String x){
+
+    static float getFloat(String x) {
         Scanner s = new Scanner(System.in);
         System.out.println(x);
 
         return s.nextFloat();
     }
-    static double getDouble(String x){
+
+    static double getDouble(String x) {
         Scanner s = new Scanner(System.in);
         System.out.println(x);
 
         return s.nextDouble();
+    }
+
+    static double round(double x) {
+        return (int) (x * 100) / 100.0;
     }
 }
