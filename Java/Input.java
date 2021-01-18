@@ -2,59 +2,64 @@ import java.util.Scanner;
 
 abstract public class Input {
     /**
-     * questa  classe ci permette di usare il Input.get* come in java--
+     * questa  classe ha diversi tool per semplificare l'input e gestire dei valori
      */
 
-    static byte getByte(String x) {
+    public static byte getByte(String x) {
         Scanner s = new Scanner(System.in);
-        System.out.println(x);
+        System.out.print(x);
 
         return s.nextByte();
     }
 
-    static short getShort(String x) {
+    public static short getShort(String x) {
         Scanner s = new Scanner(System.in);
-        System.out.println(x);
+        System.out.print(x);
 
         return s.nextShort();
     }
 
-    static int getInt(String x) {
+    public static int getInt(String x) {
         Scanner s = new Scanner(System.in);
-        System.out.println(x);
+        System.out.print(x);
 
         return s.nextInt();
     }
 
-    static long getLong(String x) {
+    public static long getLong(String x) {
         Scanner s = new Scanner(System.in);
-        System.out.println(x);
+        System.out.print(x);
 
         return s.nextLong();
     }
 
-    static String getString(String x) {
+    public static String getString(String x) {
         Scanner s = new Scanner(System.in);
-        System.out.println(x);
+        System.out.print(x);
 
         return s.nextLine();
     }
 
-    static float getFloat(String x) {
+    public static float getFloat(String x) {
         Scanner s = new Scanner(System.in);
-        System.out.println(x);
+        System.out.print(x);
 
         return s.nextFloat();
     }
 
-    static double getDouble(String x) {
+    public static double getDouble(String x) {
         Scanner s = new Scanner(System.in);
-        System.out.println(x);
+        System.out.print(x);
 
         return s.nextDouble();
     }
 
-    static double round(double x) {
-        return (int) (x * 100) / 100.0;
+    public static double round(double x, int precision) {
+        double p = 1;
+
+        for (int i = 0; i < precision; i++)
+            p *= 10;
+
+        return (int) (x * (int) p) / p;
     }
 }
