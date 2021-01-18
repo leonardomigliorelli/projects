@@ -3,6 +3,7 @@ import java.util.Scanner;
 abstract public class Input {
     /**
      * questa  classe ha diversi tool per semplificare l'input e gestire dei valori
+     * ricorda che ogni print della classe è senza andare a capo 
      */
 
     public static byte getByte(String x) {
