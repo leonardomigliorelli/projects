@@ -21,20 +21,15 @@ while True:
         break
     # ["io"],3,'hello', 3.4
     valore = [var.replace('"', "'") for var in valore]
-    #valore = [var.strip('[]') for var in valore]
-
-    # valore = [float(var) if (var.replace("'", "") == var) else var
-    #          for var in valore]
-    #valore = [var.replace("'", "") if (int(var) == var) else var for var in valore]
+    valore = [var.strip('[]') for var in valore]
     
     # TODO: trasforma var in valore
-    for var in valore:
-        if(var.replace("'", "") == var):  # se stiamo parlando di numeri
+    for i in range(len(valore)):
+        if(valore[i].replace("'", "") == valore[i]):  # se stiamo parlando di numeri
             # se il valore non ha uno 0 dopo la virgola è un intero
-            var = [int(var) if str(float(var)).split(
-                ".")[1] == 0 else float(var)]
+            valore[i] = (int(valore[i]) if (str(float(valore[i])).split(".")[1] == '0') else float(valore[i]))
         else:  # se stiamo parlando di stringhe
-            var = var.replace("'", "")
+            valore[i] = valore[i].replace("'", "")
 
     myObj[nome] = valore
     with open(fileName, 'w') as outfile:
